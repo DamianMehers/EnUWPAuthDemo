@@ -1,4 +1,14 @@
-﻿using System;
+﻿//*********************************************************
+//
+// Copyright (c) Damian Mehers. All rights reserved.
+// This code is licensed under the MIT License (MIT).
+// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+//
+//*********************************************************
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -47,7 +57,7 @@ namespace EvernoteUniveralWindowsAuthenticationDemo {
       sigBaseStringParams += "&" + "oauth_nonce=" + nonce;
       sigBaseStringParams += "&" + "oauth_signature_method=HMAC-SHA1";
       sigBaseStringParams += "&" + "oauth_timestamp=" + timeStamp;
-      sigBaseStringParams += "&" + "oauth_version=1.0";
+        sigBaseStringParams += "&" + "oauth_version=1.0";
       var sigBaseString = "GET&";
       sigBaseString += Uri.EscapeDataString(requestTokenUrl) + "&" + Uri.EscapeDataString(sigBaseStringParams);
       var signature = GetSignature(sigBaseString, secret);
