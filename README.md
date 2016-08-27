@@ -1,7 +1,7 @@
 # EnUWPAuthDemo
-A example of authenticating to Evernote on Windows Universal
+A complete standalone working example of authenticating to Evernote on Windows Universal
 
-You'll want to copy the `EvernoteAuthenticator` class.
+You'll want to use the [EvernoteAuthenticator](EvernoteUniveralWindowsAuthenticationDemo/EvernoteAuthenticator.cs) class.
 
 ``` C#
       var result = await EvernoteAuthenticator.AuthenticateAsync(Host.Text, Key.Text, Secret.Text, Callback.Text);
